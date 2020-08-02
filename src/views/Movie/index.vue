@@ -1,0 +1,105 @@
+<template>
+  <div id="main">
+    <Header title="电影推荐" />
+
+    <div id="content">
+      <div class="movie_menu">
+        <router-link tag="div" to="/movie/city" class="city_name">
+          <span>大连</span><i class="iconfont icon-lower-triangle"></i>
+        </router-link>
+        <router-link tag="div" to="/movie/switch" class="hot_switch">
+          <router-link tag="div" to="/movie/nowPlay" class="hot_item"
+            >正在热映</router-link
+          >
+          <router-link tag="div" to="/movie/comePlay" class="hot_item"
+            >即将上映</router-link
+          >
+        </router-link>
+        <router-link tag="div" to="/movie/search" class="search_entry">
+          <i class="iconfont icon-sousuo"></i>
+        </router-link>
+      </div>
+    </div>
+    <keep-live>
+      <router-view />
+    </keep-live>
+
+    <TabBar />
+  </div>
+</template>
+
+<script>
+import Header from "@/components/Header";
+import TabBar from "@/components/TabBar";
+
+export default {
+  name: "Movie",
+  components: {
+    Header,
+    TabBar
+  }
+};
+</script>
+
+<style scoped>
+#content .movie_menu {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.movie_menu .city_name {
+  margin-left: 20px;
+  height: 100%;
+  line-height: 125px;
+}
+
+.movie_menu .city_name.active {
+  color: blueviolet;
+  border-bottom: 2px blueviolet solid;
+  line-height: 125px;
+}
+
+.movie_menu .hot_switch {
+  display: flex;
+  height: 100%;
+  line-height: 125px;
+}
+
+.movie_menu .hot_item {
+  font-size: 15px;
+  color: yellowgreen;
+  width: 80px;
+  line-height: 125px;
+}
+
+.movie_menu .hot_item.active {
+  color: blueviolet;
+  border-bottom: 2px blueviolet solid;
+  line-height: 125px;
+}
+
+.movie_menu .search_entry {
+  margin-right: 20px;
+  height: 100%;
+  line-height: 125px;
+  display: inline-block;
+}
+
+.movie_menu .search_entry.active {
+  color: blueviolet;
+  border-bottom: 2px blueviolet solid;
+  line-height: 125px;
+}
+
+.movie_menu .search_entry i {
+  font-size: 24px;
+  color: blueviolet;
+  line-height: 125px;
+  display: inline-block;
+}
+</style>
