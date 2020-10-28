@@ -1,34 +1,30 @@
 export default {
-    path: "/movie",
+    path: '/movie',
     component: () =>
         import ("@/views/Movie"),
     children: [{
-            path: "city",
-            component: () => {
+            // 按需引入不可以加入回调函数的大括号，否则路由无法显示
+            path: 'city',
+            component: () =>
                 import ("@/components/City")
-            }
         },
         {
-            path: "comePlay",
-            component: () => {
+            path: 'comePlay',
+            component: () =>
                 import ("@/components/ComePlay")
-            }
         },
         {
-            path: "nowPlay",
-            component: () => {
+            path: 'nowPlay',
+            component: () =>
                 import ("@/components/NowPlay")
-            }
         },
         {
-            path: "search",
-            component: () => {
-
+            path: 'search',
+            component: () =>
                 import ("@/components/Search")
-            }
         },
         {
-            path: "/movie",
+            path: '/movie',
             redirect: "/movie/nowPlay"
         }
     ]

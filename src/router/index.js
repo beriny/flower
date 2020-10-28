@@ -4,7 +4,7 @@ import MovieRouter from './movie';
 import MineRouter from './mine';
 import CinemaRouter from './cinema';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 
 const router = new VueRouter({
@@ -21,4 +21,4 @@ const router = new VueRouter({
     ]
 })
 
-export default router
+export default router;
