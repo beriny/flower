@@ -86,12 +86,38 @@
         </div>
       </li>
     </ul>
+    <ul>
+      <li v-for="item in movieList" :key="item.index">
+        {{ item.id }}™ {{ item.title }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   name: "CiList",
+  data() {
+    return {
+      movieList: [],
+    };
+  },
+  mounted() {
+    this.axios
+      .get("https://jsonplaceholder.typicode.com/albums")
+      .then((res) => {
+        var msg = res.data;
+        console.log(msg);
+        for (var i = 0; i < msg.length; i++) {
+          console.log(msg[i].id);
+
+          this.movieList.push({
+            id: msg[i].id,
+            title: msg[i].title,
+          });
+        }
+      });
+  },
 };
 </script>
 

@@ -1,29 +1,27 @@
 <template>
   <div id="main">
     <Header title="电影推荐" />
-
     <div id="content">
       <div class="movie_menu">
-        <router-link tag="div" to="/movie/city" class="city_name">
+        <router-link tag="div" to="/movie/City" class="city_name">
           <span>大连</span><i class="iconfont icon-lower-triangle"></i>
         </router-link>
-        <router-link tag="div" to="/movie/switch" class="hot_switch">
-          <router-link tag="div" to="/movie/nowPlay" class="hot_item"
-            >正在热映</router-link
-          >
-          <router-link tag="div" to="/movie/comePlay" class="hot_item"
-            >即将上映</router-link
-          >
-        </router-link>
-        <router-link tag="div" to="/movie/search" class="search_entry">
+        <div class="hot_switch">
+          <router-link tag="div" to="/movie/NowPlay" class="hot_item">
+            正在热映
+          </router-link>
+          <router-link tag="div" to="/movie/ComePlay" class="hot_item">
+            即将上映
+          </router-link>
+        </div>
+        <router-link tag="div" to="/movie/Search" class="search_entry">
           <i class="iconfont icon-sousuo"></i>
         </router-link>
       </div>
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </div>
-    <keep-live>
-      <router-view />
-    </keep-live>
-
     <TabBar />
   </div>
 </template>
@@ -36,8 +34,8 @@ export default {
   name: "Movie",
   components: {
     Header,
-    TabBar
-  }
+    TabBar,
+  },
 };
 </script>
 

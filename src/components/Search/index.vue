@@ -1,72 +1,70 @@
 <template>
-  <div class="content">
-    <div class="search_body">
-      <div class="search_input">
-        <div class="search_input_warpper">
-          <i class="iconfont icon-sousou"></i>
-          <input type="text" />
-        </div>
+  <div class="search_body">
+    <div class="search_input">
+      <div class="search_input_warpper">
+        <i class="iconfont icon-sousou"></i>
+        <input type="text" />
       </div>
-      <div class="search_result">
-        <h3>电影/电视剧/综艺</h3>
-        <ul>
-          <li>
-            <div class="img">
-              <img src="@/assets/movie.png" alt="" />
-              <div class="info">
-                <p><span>无名之辈</span><span>8.5</span></p>
-                <p>A cool Fish</p>
-                <p>剧情：喜剧，犯罪</p>
-                <p>2018-11-10</p>
-              </div>
+    </div>
+    <div class="search_result">
+      <h3>电影/电视剧/综艺</h3>
+      <ul>
+        <li>
+          <div class="img">
+            <img src="@/assets/movie.png" alt="" />
+            <div class="info">
+              <p><span>无名之辈</span><span>8.5</span></p>
+              <p>A cool Fish</p>
+              <p>剧情：喜剧，犯罪</p>
+              <p>2018-11-10</p>
             </div>
-          </li>
-          <li>
-            <div class="img">
-              <img src="@/assets/movie.png" alt="" />
-              <div class="info">
-                <p><span>无名之辈</span><span>8.5</span></p>
-                <p>A cool Fish</p>
-                <p>剧情：喜剧，犯罪</p>
-                <p>2018-11-10</p>
-              </div>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <img src="@/assets/movie.png" alt="" />
+            <div class="info">
+              <p><span>无名之辈</span><span>8.5</span></p>
+              <p>A cool Fish</p>
+              <p>剧情：喜剧，犯罪</p>
+              <p>2018-11-10</p>
             </div>
-          </li>
-          <li>
-            <div class="img">
-              <img src="@/assets/movie.png" alt="" />
-              <div class="info">
-                <p><span>无名之辈</span><span>8.5</span></p>
-                <p>A cool Fish</p>
-                <p>剧情：喜剧，犯罪</p>
-                <p>2018-11-10</p>
-              </div>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <img src="@/assets/movie.png" alt="" />
+            <div class="info">
+              <p><span>无名之辈</span><span>8.5</span></p>
+              <p>A cool Fish</p>
+              <p>剧情：喜剧，犯罪</p>
+              <p>2018-11-10</p>
             </div>
-          </li>
-          <li>
-            <div class="img">
-              <img src="@/assets/movie.png" alt="" />
-              <div class="info">
-                <p><span>无名之辈</span><span>8.5</span></p>
-                <p>A cool Fish</p>
-                <p>剧情：喜剧，犯罪</p>
-                <p>2018-11-10</p>
-              </div>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <img src="@/assets/movie.png" alt="" />
+            <div class="info">
+              <p><span>无名之辈</span><span>8.5</span></p>
+              <p>A cool Fish</p>
+              <p>剧情：喜剧，犯罪</p>
+              <p>2018-11-10</p>
             </div>
-          </li>
-          <li>
-            <div class="img">
-              <img src="@/assets/movie.png" alt="" />
-              <div class="info">
-                <p><span>无名之辈</span><span>8.5</span></p>
-                <p>A cool Fish</p>
-                <p>剧情：喜剧，犯罪</p>
-                <p>2018-11-10</p>
-              </div>
+          </div>
+        </li>
+        <li>
+          <div class="img">
+            <img src="@/assets/movie.png" alt="" />
+            <div class="info">
+              <p><span>无名之辈</span><span>8.5</span></p>
+              <p>A cool Fish</p>
+              <p>剧情：喜剧，犯罪</p>
+              <p>2018-11-10</p>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
