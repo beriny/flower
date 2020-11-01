@@ -28,12 +28,13 @@ export default {
 #footer {
   width: 100%;
   height: 70px;
-  background: lemonchiffon;
+  background: gold;
   border-top: 2px whitesmoke solid;
   position: fixed;
   left: 0;
   bottom: 0;
   border-radius: 5%;
+  position: fixed;
 }
 
 #footer ul {
