@@ -1,11 +1,6 @@
 <template>
   <div class="movie_body">
     <ul>
-      <li v-for="item in movieList" :key="item.index">
-        {{ item.id }}* {{ item.title }}
-      </li>
-    </ul>
-    <ul>
       <li>
         <div class="pic_show"><img src="@/assets/movie.png" alt="" /></div>
         <div class="info_list">
@@ -57,6 +52,15 @@
         <div class="btn_mall">按钮</div>
       </li>
     </ul>
+    <scroller>
+      <div>
+        <ul>
+          <li v-for="item in movieList" :key="item.index">
+            {{ item.id }}* {{ item.title }}
+          </li>
+        </ul>
+      </div>
+    </scroller>
   </div>
 </template>
 
@@ -69,8 +73,8 @@ export default {
     };
   },
   mounted() {
-    this.axios
-      .get("https://jsonplaceholder.typicode.com/albums")
+    this.axios //https://jsonplaceholder.typicode.com
+      .get("posts/photos")
       .then((res) => {
         var msg = res.data;
         console.log(msg);
@@ -104,5 +108,9 @@ export default {
   align-items: center;
   border-bottom: 1px white solid;
   padding-left: 5px;
+}
+.movie_body ul li .btn_mall {
+  color: lavenderblush;
+  background: thistle;
 }
 </style>

@@ -4,7 +4,9 @@
     <div id="content">
       <div class="movie_menu">
         <router-link tag="div" to="/movie/City" class="city_name">
-          <span>大连</span><i class="iconfont icon-lower-triangle"></i>
+          <span>{{ $store.state.city.nm }}</span
+          ><i class="iconfont icon-lower-triangle"></i>
+          <span>大连</span>
         </router-link>
         <div class="hot_switch">
           <router-link tag="div" to="/movie/NowPlay" class="hot_item">
@@ -29,12 +31,28 @@
 <script>
 import Header from "@/components/Header";
 import TabBar from "@/components/TabBar";
+import { messageBox } from "@/components/JS";
 
 export default {
   name: "Movie",
   components: {
     Header,
     TabBar,
+    // MessageBox,
+  },
+  mounted() {
+    messageBox({
+      title: "定位",
+      content: "沈阳",
+      cancel: "取消",
+      ok: "切换定位",
+      handleOk: function() {
+        // window.localStorage.setItem("nowNM", nm);
+        // window.localStorage.setItem("nowID", id);
+        // window.location.reload();
+        console.log("loding");
+      },
+    });
   },
 };
 </script>
